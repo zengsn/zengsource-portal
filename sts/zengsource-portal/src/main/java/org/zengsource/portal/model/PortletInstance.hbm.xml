@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.zengsource.portal.model.PortletInstance" table="portletinstances">
+
+		<id name="id" column="piid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_piid</param>
+			</generator>
+		</id>
+		<property name="name" column="name_" type="string" />
+		<property name="index" column="index_" type="int" />
+		<property name="cls" column="cls_" type="string" />
+		<property name="style" column="style_" type="string" />
+		<property name="colspan" column="colspan_" type="int" />
+		<property name="rowspan" column="rowspan_" type="int" />
+		<property name="width" column="width_" type="int" />
+		<property name="height" column="height_" type="int" />
+
+		<property name="html" column="html_" type="string" />
+
+		<many-to-one name="portlet" column="portletid_"
+			lazy="false" not-null="false" cascade="none" insert="true" update="false" />
+
+		<set name="pageSet" lazy="false" cascade="none" table="pages_portlets">
+			<key column="portletinstanceid_" not-null="true" />
+			<many-to-many class="org.zengsource.portal.model.Page"
+				column="pageid_" not-found="exception" />
+		</set>
+
+		<set name="settingSet" lazy="false" cascade="none">
+			<key column="instanceid_" not-null="false" />
+			<one-to-many class="org.zengsource.portal.model.PortletSetting"
+				not-found="ignore" />
+		</set>
+
+		<property name="description" column="description_" type="string" />
+		<property name="createdTime" column="createdtime_" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

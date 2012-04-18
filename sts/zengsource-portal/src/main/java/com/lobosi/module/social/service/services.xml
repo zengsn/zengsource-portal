@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 社交服务 -->
+	<bean id="socialService" class="com.lobosi.module.social.service.SocialServiceImpl">
+		<property name="userInfoService">
+			<ref bean="userInfoService" />
+		</property>
+	</bean>
+	<!-- 好友 -->
+	<bean id="friendshipService" class="com.lobosi.module.social.service.FriendshipServiceImpl">
+		<property name="friendshipDao">
+			<ref bean="friendshipDao" />
+		</property>
+	</bean>
+	<!-- 用户更新 -->
+	<bean id="userUpdateService" class="com.lobosi.module.social.service.UserUpdateServiceImpl">
+		<property name="userUpdateDao">
+			<ref bean="userUpdateDao" />
+		</property>
+	</bean>
+
+</beans>

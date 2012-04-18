@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lobosi.module.task.model.Task" table="tasks"
+		lazy="false">
+		<id name="id" column="tsid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_tsid</param>
+			</generator>
+		</id>
+
+		<many-to-one name="requestor" column="requestorid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="org.zengsource.portal.module.user.model.UserInfo" />
+		<!-- 
+		<many-to-one name="mainExecution" column="mainexecutionid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="com.lobosi.module.task.model.TaskExecution" />
+		 -->
+		<set name="executorSet" lazy="false" cascade="none" table="tasks_executors">
+			<key column="taskid_" not-null="true" />
+			<many-to-many class="com.lobosi.module.task.model.TaskExecutor"
+				column="executorid_" not-found="exception" />
+		</set>
+
+		<property name="name" column="name_" type="string" />
+		<property name="introduction" column="introduction_" type="string" />
+		<property name="tags" column="tags_" type="string" />
+		<property name="feature" column="feature_" type="string" />
+		<property name="attachment" column="attachment_" type="string" />
+
+		<property name="status" column="status_" type="int" />
+		<property name="progress" column="progress_" type="float" />
+
+		<property name="startTime" column="starttime_" type="timestamp" />
+		<property name="endTime" column="endtime_" type="timestamp" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

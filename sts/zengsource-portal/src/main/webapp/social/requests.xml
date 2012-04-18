@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reponse success="true">
+	<Request>
+		<id>1</id>
+		<username>ZSN</username>
+		<avatar>1.jpg</avatar>
+		<introduction>我是……</introduction>
+		<message>今年的烟花……</message>
+		<createdTime>昨天</createdTime>
+	</Request>
+	<Request>
+		<id>2</id>
+		<username>ZSN</username>
+		<nickname>ZSN</nickname>
+		<avatar>1.jpg</avatar>
+		<introduction>我是……</introduction>
+		<message>今年的烟花……</message>
+		<createdTime>2 小时</createdTime>
+	</Request>
+</reponse>

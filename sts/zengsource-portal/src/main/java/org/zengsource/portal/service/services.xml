@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 用户 -->
+	<bean id="userService" class="org.zengsource.portal.service.UserServiceImpl">
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
+	<!-- 角色 -->
+	<bean id="roleService" class="org.zengsource.portal.service.RoleServiceImpl">
+		<property name="roleDao">
+			<ref bean="roleDao" />
+		</property>
+	</bean>
+	<!-- 权限 -->
+	<bean id="permissionService" class="org.zengsource.portal.service.PermissionServiceImpl">
+		<property name="permissionDao">
+			<ref bean="permissionDao" />
+		</property>
+	</bean>
+	<!-- 邀请码 -->
+	<bean id="invitationService" class="org.zengsource.portal.service.InvitationServiceImpl">
+		<property name="invitationDao">
+			<ref bean="invitationDao" />
+		</property>
+	</bean>
+	<!-- 模块 -->
+	<bean id="moduleService" class="org.zengsource.portal.service.ModuleServiceImpl">
+		<property name="moduleDao">
+			<ref bean="moduleDao" />
+		</property>
+		<property name="menuService">
+			<ref bean="menuService" />
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="roleService">
+			<ref bean="roleService" />
+		</property>
+		<property name="portletService">
+			<ref bean="portletService" />
+		</property>
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+		<property name="cacheService">
+			<ref bean="cacheService" />
+		</property>
+		<property name="configService">
+			<ref bean="configService" />
+		</property>
+	</bean>	
+	<!-- 菜单 -->
+	<bean id="menuService" class="org.zengsource.portal.service.MenuServiceImpl">
+		<property name="menuDao">
+			<ref bean="menuDao" />
+		</property>
+	</bean>	
+	<!-- 页面 -->
+	<bean id="pageService" class="org.zengsource.portal.service.PageServiceImpl">
+		<property name="pageDao">
+			<ref bean="pageDao" />
+		</property>
+		<property name="cacheService">
+			<ref bean="cacheService" />
+		</property>
+		<property name="portletService">
+			<ref bean="portletService" />
+		</property>
+		<property name="portletInstanceService">
+			<ref bean="portletInstanceService" />
+		</property>
+	</bean>	
+	<!-- 配置 -->
+	<bean id="configService" class="org.zengsource.portal.service.ConfigServiceImpl">
+		<property name="configDao">
+			<ref bean="configDao" />
+		</property>
+		<property name="cacheService">
+			<ref bean="cacheService" />
+		</property>
+	</bean>	
+	<!-- Portlet -->
+	<bean id="portletService" class="org.zengsource.portal.service.PortletServiceImpl">
+		<property name="portletDao">
+			<ref bean="portletDao" />
+		</property>
+		<property name="portletSettingDao">
+			<ref bean="portletSettingDao" />
+		</property>
+	</bean>	
+	<bean id="portletInstanceService" class="org.zengsource.portal.service.PortletInstanceServiceImpl">
+		<property name="portletSettingDao">
+			<ref bean="portletSettingDao" />
+		</property>
+		<property name="portletInstanceDao">
+			<ref bean="portletInstanceDao" />
+		</property>
+		<property name="portletService">
+			<ref bean="portletService" />
+		</property>
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+	</bean>	
+
+	<!-- 邮件 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<!-- 也可以直接在这里填写帐号与密码。-->
+		<!--  
+		<property name="username" value="YOUR_GMAIL_ACCOUNT" />
+		<property name="password" value="YOUR_GMAIL_PASSWORD" />
+		 -->
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- this is a template message that we can pre-load with default state -->
+	<bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="admin@lobosi.com" />
+		<property name="subject" value="LoBoSi.com" />
+	</bean>
+
+	<bean id="mailService" class="org.zengsource.portal.service.MailServiceImpl">
+		<property name="mailSender" ref="mailSender" />
+		<property name="templateMessage" ref="templateMessage" />
+		<property name="configService">
+			<ref bean="configService"/>
+		</property>
+	</bean>
+
+</beans>

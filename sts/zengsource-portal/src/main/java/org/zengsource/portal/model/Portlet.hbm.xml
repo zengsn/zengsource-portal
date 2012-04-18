@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.zengsource.portal.model.Portlet" table="portlets" lazy="false">
+
+		<id name="id" column="plid_" type="int" >
+			<generator class="sequence">
+				<param name="sequence">seria_plid</param>
+			</generator>			
+		</id>
+		<property name="name" column="name_" type="string" />
+		<property name="type" column="type_" type="string" />
+		<property name="template" column="template_" type="string" />
+		<!-- property name="pageUrl" column="pageurl_" type="string" /-->
+
+		<property name="html" column="html_" type="string" />
+		<property name="singleton" column="singleton_" type="boolean" />
+		<property name="closable" column="closable_" type="boolean" />
+		<property name="collapsible" column="collapsible_" type="boolean" />
+		<property name="draggable" column="draggable_" type="boolean" />
+
+		<property name="jsSource" column="jssource_" type="string" />
+		<property name="jsClass" column="jsclass_" type="string" unique="true"/>
+		<property name="jsWidget" column="jswidget_" type="string" />
+		<property name="jsController" column="jscontroller_" type="string" />
+		<property name="jsRequiredModule" column="jsrequiredmodule_" type="string" />
+		<property name="colspan" column="colspan_" type="int" />
+		<property name="rowspan" column="rowspan_" type="int" />
+		<property name="width" column="width_" type="int" />
+		<property name="height" column="height_" type="int" />
+		
+		<many-to-one name="module" column="moduleid_" not-null="true"
+			cascade="none" insert="true" update="true" lazy="false" />
+
+		<set name="settingSet" lazy="false" inverse="true">
+			<key column="portletid_" not-null="false" />
+			<one-to-many class="org.zengsource.portal.model.PortletSetting"
+				not-found="ignore" />
+		</set>
+
+		<!-- inverse="true" is important!!! -->
+		<set name="instanceSet" lazy="false" inverse="true">
+			<key column="portletid_" not-null="false" />
+			<one-to-many class="org.zengsource.portal.model.PortletInstance"
+				not-found="ignore" />
+		</set>
+
+		<property name="description" column="description_" type="string" />
+		<property name="createdTime" column="createdtime_" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lobosi.module.task.model.TaskNote" table="tasknotes"
+		lazy="false">
+		<id name="id" column="tnid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_tnid</param>
+			</generator>
+		</id>
+
+		<many-to-one name="executor" column="executorid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="com.lobosi.module.task.model.TaskExecutor" />
+
+		<many-to-one name="execution" column="executionid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="com.lobosi.module.task.model.TaskExecution" />
+
+		<property name="text" column="text_" type="string" />
+		<property name="status" column="status_" type="int" />
+		<property name="progress" column="progress_" type="float" />
+
+		<property name="attachment" column="attachment_" type="string" />
+		
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

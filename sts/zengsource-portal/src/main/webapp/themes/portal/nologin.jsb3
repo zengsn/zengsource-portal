@@ -1,0 +1,715 @@
+{
+    "projectName": "Project Name",
+    "licenseText": "Copyright(c) 2011 Company Name",
+    "builds": [
+        {
+            "name": "All Classes",
+            "target": "all-classes.js",
+            "options": {
+                "debug": true
+            },
+            "files": [
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "IdGenerator.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Observable.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Operation.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "validations.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/app/",
+                    "name": "Controller.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "SortTypes.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/app/",
+                    "name": "EventBus.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Types.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Association.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "HashMap.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Filter.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Connection.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Sorter.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/writer/",
+                    "name": "Writer.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "ResultSet.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "KeyMap.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Memento.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "CubicBezier.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "Proxy.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "Template.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "Queue.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "StatusProxy.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/",
+                    "name": "Layout.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ZIndexManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "Target.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ComponentQuery.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Color.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "KeyNav.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Floating.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/boxOverflow/",
+                    "name": "None.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Offset.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "AbstractContainer.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "ClickRepeater.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Animate.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "TextMetrics.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/state/",
+                    "name": "Provider.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "AbstractManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ModelManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ComponentManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "AbstractMixedCollection.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Sortable.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "MixedCollection.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Errors.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "StoreManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "Ajax.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/writer/",
+                    "name": "Json.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/reader/",
+                    "name": "Reader.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/reader/",
+                    "name": "Json.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/proxy/",
+                    "name": "Proxy.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/proxy/",
+                    "name": "Server.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/proxy/",
+                    "name": "Ajax.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Model.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "Easing.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "XTemplate.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "AbstractDock.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Dock.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Tip.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "Sprite.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "Element.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "CompositeElement.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "CompositeSprite.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "FocusManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/target/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "Animator.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Draw.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "PropertyHandler.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/fx/",
+                    "name": "Anim.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Region.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DragDropManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "Container.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "Auto.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/boxOverflow/",
+                    "name": "Scroller.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DragDrop.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DD.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DDProxy.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DragSource.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "DD.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Button.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/state/",
+                    "name": "Manager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/state/",
+                    "name": "Stateful.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "AbstractComponent.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/container/",
+                    "name": "AbstractContainer.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/container/",
+                    "name": "Container.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "Header.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/toolbar/",
+                    "name": "Fill.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/button/",
+                    "name": "Button.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/toolbar/",
+                    "name": "Item.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/toolbar/",
+                    "name": "Separator.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/boxOverflow/",
+                    "name": "Menu.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "Box.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "VBox.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "HBox.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/toolbar/",
+                    "name": "Toolbar.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "AbstractPanel.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/tip/",
+                    "name": "Tip.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/tip/",
+                    "name": "ToolTip.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/tip/",
+                    "name": "QuickTip.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/tip/",
+                    "name": "QuickTipManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/app/",
+                    "name": "Application.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Batch.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Point.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "Layer.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Request.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "PluginManager.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "LoadMask.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Auto.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/resizer/",
+                    "name": "Resizer.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/panel/",
+                    "name": "Tool.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "CSS.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "Item.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "KeyNav.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/dd/",
+                    "name": "DragTracker.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "AbstractStore.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "Separator.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Grouper.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ElementLoader.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/",
+                    "name": "Draw.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "AbstractFit.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "CompositeSprite.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ComponentLoader.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "ComponentDragger.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/window/",
+                    "name": "Window.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "Store.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/",
+                    "name": "ArrayStore.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/container/",
+                    "name": "Fit.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "CheckItem.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/menu/",
+                    "name": "Menu.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Surface.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Component.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/reader/",
+                    "name": "Array.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/resizer/",
+                    "name": "ResizeTracker.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/proxy/",
+                    "name": "Client.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "ShadowPool.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Matrix.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "SpriteDD.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/data/proxy/",
+                    "name": "Memory.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/",
+                    "name": "Shadow.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/",
+                    "name": "Sprite.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/engine/",
+                    "name": "Svg.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/draw/engine/",
+                    "name": "Vml.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "NaviBar.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/button/",
+                    "name": "Social.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/button/",
+                    "name": "User.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/button/",
+                    "name": "Notice.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "HeaderBar.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/button/",
+                    "name": "Apps.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "Portlet.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "Portal.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "LinkHandler.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "Panel.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/util/",
+                    "name": "Cookies.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/button/",
+                    "name": "Split.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/form/field/",
+                    "name": "VTypes.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/field/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/form/field/",
+                    "name": "Field.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/form/",
+                    "name": "Labelable.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "LinkItem.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "LinkButton.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/view/",
+                    "name": "LinkSplitButton.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/themes/portal/controller/",
+                    "name": "NoLogin.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/form/field/",
+                    "name": "Base.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/layout/component/field/",
+                    "name": "Text.js"
+                },
+                {
+                    "path": "http://localhost/zsn.cc/lib/sencha/extjs-4.0.7/src/form/field/",
+                    "name": "Text.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/system/frontend/view/signin/",
+                    "name": "Portlet.js"
+                },
+                {
+                    "path": "http://localhost:8080/zengsource-portal/system/frontend/controller/",
+                    "name": "SignIn.js"
+                }
+            ]
+        },
+        {
+            "name": "Application - Production",
+            "target": "app-all.js",
+            "compress": true,
+            "files": [
+                {
+                    "path": "",
+                    "name": "all-classes.js"
+                },
+                {
+                    "path": "",
+                    "name": "app.js"
+                }
+            ]
+        }
+    ],
+    "resources": []
+}

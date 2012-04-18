@@ -1,0 +1,4 @@
+[
+	{xtype:'signupportlet', width:660, height: 270, colspan: 2},
+	{xtype:'signup3rdportlet', width:335, height: 270}
+]

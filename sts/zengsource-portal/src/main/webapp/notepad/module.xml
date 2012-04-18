@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<title>记事本</title>
+	<desc>个人记事软件</desc>
+	<menus>
+		<menu>
+			<index>1</index>
+			<name>notegrid</name>
+			<title>记事管理</title>
+			<widget>notegridpanel</widget>
+			<controller>JXP.notepad.admin.controller.Mgmt</controller>
+		</menu>
+	</menus>
+	<portlets>
+		<portlet>
+			<name>NotepadPortlet</name>
+			<title>记事本</title>
+			<width>1000</width>
+			<height>600</height>
+			<jsSource>Portlet.js</jsSource>
+			<jsClass>JXP.notepad.frontend.view.Portlet</jsClass>
+			<jsWidget>notepadportlet</jsWidget>
+			<jsController>JXP.notepad.frontend.controller.Notepad</jsController>
+			<roles>member</roles>
+		</portlet>
+	</portlets>
+	<pages>
+		<page>
+			<url>/notepad/index.jxp</url>
+			<name>记事本</name>
+			<columns>1</columns>
+			<portlets>
+				<portlet>
+					<width>1000</width>
+					<height>600</height>
+					<jsClass>JXP.notepad.frontend.view.Portlet</jsClass>
+				</portlet>
+			</portlets>
+			<roles>member</roles>
+		</page>
+	</pages>
+</module>

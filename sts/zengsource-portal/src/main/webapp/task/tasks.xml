@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>26</totalCount>
+	<Task>
+		<id>1</id>
+		<name>UML作业</name>
+		<requestor>曾老师</requestor>
+		<responders>ABC等 10 人</responders>
+		<introduction>ABC等 10 人</introduction>
+		<tags>UML, 作业</tags>
+		<status>1</status>
+		<progress>30%</progress>
+		<feature>传文件</feature>
+		<lastUpdate>ABC 刚刚已提交文件：123.doc。</lastUpdate>
+		<startTime>2012-2-9 08:00:00</startTime>
+		<endTime>2012-2-13 08:00:00</endTime>
+		<createdTime>2012-2-3 08:00:00</createdTime>
+	</Task>
+</response>

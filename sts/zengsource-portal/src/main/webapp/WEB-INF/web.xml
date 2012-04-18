@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<display-name>ZengSource Portal</display-name>
+	<!-- // SPRING START ////////////////////////////////////////////////////////////////////////////// -->
+	<!-- // Doc 3.1 - Getting Spring Ready // -->
+	<!-- // Details to configure Spring Framework, please refer the Spring official 
+		documentation. // -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- // SPRING END /////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- // ZENGSOURCE MVC START ///////////////////////////////////////////////////////////////////// -->
+	<!-- // Doc 3.2	Adding InletServlet                                                             // -->
+	<!-- // Details of servlet configuration, please the ZengSource MVC Reference.                  // -->
+	<servlet>
+		<!-- display-name>InletServlet</display-name -->
+		<servlet-name>InletServlet</servlet-name>
+		<servlet-class>org.zengsource.mvc.InletServlet</servlet-class>
+		<!-- description>ZengSource MVC Controller</description -->
+		<load-on-startup>1</load-on-startup>
+		<!-- 
+		<init-param>
+			<param-name>actionEditor</param-name>
+			<param-value>default</param-value>
+			<description>Action Editor</description>
+		</init-param>
+		<init-param>
+			<param-name>pageURL</param-name>
+			<param-value>jxp</param-value>
+			<description>Page URL Mapping</description>
+		</init-param>
+		<init-param>
+			<param-name>xmlURL</param-name>
+			<param-value>xmd</param-value>
+			<description>XML URL Mapping</description>
+		</init-param>
+		<init-param>
+			<param-name>jsonURL</param-name>
+			<param-value>jsd</param-value>
+			<description>JSON URL Mapping</description>
+		</init-param>
+		 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.jxp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.xmd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.jsd</url-pattern>
+	</servlet-mapping>
+	<!-- // ZENGSOURCE MVC END /////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- // SPRING SECURITY START //////////////////////////////////////////////////////////////////// -->
+	<!-- 
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>
+            org.springframework.web.filter.DelegatingFilterProxy
+        </filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+     -->
+	<!-- // SPRING SECURITY END ////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- The filter-name matches name of a 'shiroFilter' bean inside applicationContext.xml -->
+	<filter>
+	    <filter-name>shiroFilter</filter-name>
+	    <!-- filter-class>org.apache.shiro.web.servlet.IniShiroFilter</filter-class-->
+	    <!-- 
+	    <init-param>
+	        <param-name>configPath</param-name>
+	        <param-value>classpath:shiro.ini</param-value>
+	    </init-param>
+	     -->
+	    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	    <init-param>
+	        <param-name>targetFilterLifecycle</param-name>
+	        <param-value>true</param-value>
+	    </init-param>
+	</filter>
+
+	<!-- Make sure any request you want accessible to Shiro is filtered. /* catches all -->
+	<!-- requests.  Usually this filter mapping is defined first (before all others) to -->
+	<!-- ensure that Shiro works in subsequent filters in the filter chain:             -->
+	<filter-mapping>
+	    <filter-name>shiroFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 
+	<filter>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	    <init-param>
+	        <param-name>logLevel</param-name>
+	        <param-value>WARN</param-value>
+	    </init-param>
+	</filter>
+	<filter-mapping>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+    -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

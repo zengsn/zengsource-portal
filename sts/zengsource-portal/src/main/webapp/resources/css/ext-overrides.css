@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+/* Override Ext Theme*/
+.x-panel-header-text, .x-window-header-text, .x-grid-cell-inner, .x-menu-item-text, .x-column-header-text, .x-grid-group-title {
+	font-size: 12px;
+}
+.x-btn-inner, .x-toolbar-text {
+	font-size: 12px !important;
+}

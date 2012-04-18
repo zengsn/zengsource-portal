@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 用户首页 -->
+	<bean id="user.index" class="org.zengsource.portal.module.user.web.IndexAction">
+		
+	</bean>
+
+	<!-- 用户信息 -->
+	<bean id="user.info" class="org.zengsource.portal.module.user.web.InfoAction" scope="prototype">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+	</bean>
+	<bean id="user.uploadavatar" class="org.zengsource.portal.web.ThemingAction">
+	</bean>
+	<bean id="user.avatar" class="org.zengsource.portal.module.user.web.AvatarAction" scope="prototype">
+		<property name="forward">
+			<value>/themes/portal/index.jsp</value>
+		</property>
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+	</bean>
+	<bean id="user.changepassword" class="org.zengsource.portal.module.user.web.ChangePasswordAction">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+	</bean>
+	
+</beans>

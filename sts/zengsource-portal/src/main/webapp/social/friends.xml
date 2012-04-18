@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reponse success="true">
+	<Friend>
+		<id>1</id>
+		<username>ZSN</username>
+		<nickname>ZSN</nickname>
+		<avatar>1.jpg</avatar>
+		<introduction>我是……</introduction>
+		<updates>今年的烟花……</updates>
+		<createdTime>昨天</createdTime>
+	</Friend>
+	<Friend>
+		<id>2</id>
+		<username>ZSN</username>
+		<nickname>ZSN</nickname>
+		<avatar>1.jpg</avatar>
+		<introduction>我是……</introduction>
+		<updates>今年的烟花……</updates>
+		<createdTime>2 小时</createdTime>
+	</Friend>
+</reponse>

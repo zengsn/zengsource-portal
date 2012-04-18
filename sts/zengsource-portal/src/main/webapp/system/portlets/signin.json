@@ -1,0 +1,7 @@
+{
+	path: {
+		'JXP.system.frontend':'system/frontend'
+	},
+	requires: ['JXP.system.frontend.controller.SignIn'],
+	portlets: [{xtype:'signinportlet', width:1000, height: 270, colspan: 3, closable: true}]
+}

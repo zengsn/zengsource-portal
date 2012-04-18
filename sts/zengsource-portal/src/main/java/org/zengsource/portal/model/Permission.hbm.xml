@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.Permission" table="permissions"
+		lazy="false">
+		<id name="id" column="pid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_pid</param>
+			</generator>
+		</id>
+		<property name="name" column="name_" type="string" />
+
+		<many-to-one name="role" column="roleid_"
+			class="org.zengsource.portal.model.Role">
+		</many-to-one>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

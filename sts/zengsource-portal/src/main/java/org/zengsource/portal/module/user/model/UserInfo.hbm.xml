@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.module.user.model.UserInfo"
+		table="userinfo" lazy="false">
+		<id name="id" column="uid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_uiid</param>
+			</generator>
+		</id>
+		<property name="username" column="username_" type="string" />
+		<property name="nickname" column="nickname_" type="string" />
+
+		<property name="tags" column="tags_" type="string" />
+		<property name="shared" column="shared_" type="boolean" />
+
+		<many-to-one name="user" column="userid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="org.zengsource.portal.model.User" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.Config" table="configs"
+		lazy="true">
+		<id name="id" column="cfgid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_cfgid</param>
+			</generator>
+		</id>
+		<property name="name" column="name_" type="string"/>
+		<property name="key" column="key_" type="string" unique="true" />
+		<property name="value" column="value_" type="string" />
+		<property name="group" column="group_" type="string" />
+		<property name="description" column="description_" type="string" />
+		<property name="createdTime" column="createdtime_" type="timestamp"
+			insert="true" update="false" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 首页 -->
+	<bean id="task.index" class="com.lobosi.module.task.web.IndexAction" scope="prototype">
+		<property name="taskService">
+			<ref bean="taskService"/>
+		</property>
+		<property name="taskNoteService">
+			<ref bean="taskNoteService"/>
+		</property>
+		<property name="taskExecutionService">
+			<ref bean="taskExecutionService"/>
+		</property>
+		<property name="taskExecutorService">
+			<ref bean="taskExecutorService"/>
+		</property>
+	</bean>
+	<bean id="task.file" class="com.lobosi.module.task.web.FileAction" scope="prototype">
+		<property name="fileTaskService">
+			<ref bean="fileTaskService"/>
+		</property>
+		<property name="taskExecutorService">
+			<ref bean="taskExecutorService"/>
+		</property>
+	</bean>
+	<bean id="task.my" class="com.lobosi.module.task.web.MyAction" scope="prototype">
+		<property name="taskService">
+			<ref bean="taskService"/>
+		</property>
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+	</bean>
+	<bean id="task.create" class="com.lobosi.module.task.web.CreateAction" scope="prototype">
+		<property name="taskService">
+			<ref bean="taskService"/>
+		</property>
+		<property name="taskExecutorService">
+			<ref bean="taskExecutorService"/>
+		</property>
+	</bean>
+	<bean id="task.execute" class="com.lobosi.module.task.web.ExecuteAction" scope="prototype">
+		<property name="taskExecutionService">
+			<ref bean="taskExecutionService"/>
+		</property>
+		<property name="taskNoteService">
+			<ref bean="taskNoteService"/>
+		</property> 
+		<property name="taskService">
+			<ref bean="taskService"/>
+		</property>
+		<property name="configService">
+			<ref bean="configService"/>
+		</property>
+	</bean>
+
+</beans>

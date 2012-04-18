@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 首页 -->
+	<bean id="system.index" class="org.zengsource.portal.web.system.IndexAction"
+		scope="prototype">
+		<property name="forward">
+			<value>/system/admin.jsp</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+	</bean>
+	<!-- 邀请码 -->
+	<bean id="system.invite" class="org.zengsource.portal.web.system.InviteAction"
+		scope="prototype">
+		<property name="invitationService">
+			<ref bean="invitationService" />
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="mailService">
+			<ref bean="mailService" />
+		</property>
+	</bean>
+	<!-- 用户 -->
+	<bean id="system.user" class="org.zengsource.portal.web.system.UserAction"
+		scope="prototype">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="roleService">
+			<ref bean="roleService" />
+		</property>
+	</bean>
+	<!-- 角色 -->
+	<bean id="system.role" class="org.zengsource.portal.web.system.RoleAction"
+		scope="prototype">
+		<property name="roleService">
+			<ref bean="roleService" />
+		</property>
+	</bean>
+	<!-- 权限 -->
+	<bean id="system.permission" class="org.zengsource.portal.web.system.PermissionAction"
+		scope="prototype">
+		<property name="permissionService">
+			<ref bean="permissionService" />
+		</property>
+		<property name="roleService">
+			<ref bean="roleService" />
+		</property>
+	</bean>
+	<!-- 配置 -->
+	<bean id="system.config" class="org.zengsource.portal.web.system.ConfigAction"
+		scope="prototype">
+		<property name="configService">
+			<ref bean="configService" />
+		</property>
+	</bean>
+	<!-- 模块 -->
+	<bean id="system.module" class="org.zengsource.portal.web.system.ModuleAction"
+		scope="prototype">
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+	<!-- 页面 -->
+	<bean id="system.page" class="org.zengsource.portal.web.system.PageAction"
+		scope="prototype">
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+		<property name="portletService">
+			<ref bean="portletService" />
+		</property>
+		<property name="portletInstanceService">
+			<ref bean="portletInstanceService" />
+		</property>
+	</bean>
+	<!-- 区块 -->
+	<bean id="system.portlet" class="org.zengsource.portal.web.system.PortletAction"
+		scope="prototype">
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+		<property name="portletService">
+			<ref bean="portletService" />
+		</property>
+		<property name="portletInstanceService">
+			<ref bean="portletInstanceService" />
+		</property>
+	</bean>
+	<!-- 区块 -->
+	<bean id="system.status" class="org.zengsource.portal.web.system.StatusAction">
+		<property name="configService">
+			<ref bean="configService" />
+		</property>
+	</bean>
+
+</beans>

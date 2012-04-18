@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.Invitation" table="invitations"
+		lazy="false">
+		<id name="id" column="ivid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_ivid</param>
+			</generator>
+		</id>
+		<many-to-one name="inviter" column="inviterid_"
+			class="org.zengsource.portal.model.User" lazy="false" />		
+		<many-to-one name="invitee" column="inviteeid_"
+			class="org.zengsource.portal.model.User" lazy="false" />
+			
+		<property name="email" column="email_" type="string" />
+		<property name="method" column="method_" type="string" />
+		<property name="code" column="code_" type="string" />
+		<property name="introduction" column="introduction_" type="string" />
+		
+		<property name="status" column="status_" type="int" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

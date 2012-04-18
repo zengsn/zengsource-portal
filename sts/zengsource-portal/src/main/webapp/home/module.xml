@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<title>个人主页</title>
+	<desc>用户的个人主页</desc>
+	<menus>
+		<menu>
+			<index>1</index>
+			<name>noticegrid</name>
+			<title>通知管理</title>
+			<widget>noticegridpanel</widget>
+			<controller>JXP.notice.admin.controller.Update</controller>
+		</menu>
+	</menus>
+	<portlets>
+		<portlet>
+			<name>HomeStatusPortlet</name>
+			<title>我的状态</title>
+			<width>1000</width>
+			<height>600</height>
+			<jsSource>status/Portlet.js</jsSource>
+			<jsClass>JXP.home.frontend.view.status.Portlet</jsClass>
+			<jsWidget>homestatusportlet</jsWidget>
+			<jsController>JXP.home.frontend.controller.Status</jsController>
+			<roles>member</roles>
+		</portlet>
+	</portlets>
+	<pages>
+		<page>
+			<url>/home/index.jxp</url>
+			<name>个人首页</name>
+			<columns>1</columns>
+			<portlets>
+				<portlet>
+					<width>1000</width>
+					<height>1200</height>
+					<jsClass>JXP.home.frontend.view.status.Portlet</jsClass>
+				</portlet>
+			</portlets>
+			<roles>member</roles>
+		</page>
+	</pages>
+</module>

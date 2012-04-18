@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.Module" table="modules"
+		lazy="false">
+		<id name="id" column="mid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_mid</param>
+			</generator>
+		</id>
+		<property name="name" column="name_" type="string" unique="true"/>
+		<property name="title" column="title_" type="string" />
+		<property name="description" column="description_" type="string" />
+
+		<property name="status" column="status_" type="int" />
+		<property name="index" column="index_" type="int" />
+
+		<set name="menuSet" lazy="false" inverse="true" order-by="index_">
+			<key column="moduleid_" not-null="true" />
+			<one-to-many class="org.zengsource.portal.model.Menu"
+				not-found="ignore" />
+		</set>
+
+		<set name="portletSet" lazy="false" inverse="true">
+			<key column="moduleid_" not-null="true" />
+			<one-to-many class="org.zengsource.portal.model.Portlet"
+				not-found="ignore" />
+		</set>
+		<set name="pageSet" lazy="false" inverse="true">
+			<key column="moduleid_" not-null="true" />
+			<one-to-many class="org.zengsource.portal.model.Page"
+				not-found="ignore" />
+		</set>
+		
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 首页 -->
+	<bean id="index" class="org.zengsource.portal.web.IndexAction">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="forward">
+			<value>/themes/portal/nologin.jsp</value>
+		</property>
+	</bean>
+	<!-- 取页面配置 -->
+	<bean id="page" class="org.zengsource.portal.web.PageAction">
+		<property name="pageService">
+			<ref bean="pageService"/>
+		</property>
+	</bean>
+	<!-- 申请邀请码 -->
+	<bean id="reqinvite" class="org.zengsource.portal.web.ReqInviteAction" scope="prototype">
+		<property name="forward">
+			<value>/themes/portal/index.jsp</value>
+		</property>
+		<property name="invitationService">
+			<ref bean="invitationService"/>
+		</property>
+	</bean>
+	<!-- 注册 -->
+	<bean id="signup" class="org.zengsource.portal.web.SignUpAction" scope="prototype">
+		<property name="forward">
+			<value>/themes/portal/index.jsp</value>
+		</property>
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="roleService">
+			<ref bean="roleService"/>
+		</property>
+		<property name="mailService">
+			<ref bean="mailService"/>
+		</property>
+		<property name="invitationService">
+			<ref bean="invitationService"/>
+		</property>
+	</bean>
+	<bean id="signupsuccess" class="org.zengsource.portal.web.SignUpAction" scope="prototype">
+		<property name="forward">
+			<value>/themes/portal/index.jsp</value>
+		</property>
+		<property name="action">
+			<value>success</value>
+		</property>
+	</bean>
+	<!-- 邮件确认 -->
+	<bean id="activate" class="org.zengsource.portal.web.ActivateAction" scope="prototype">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="mailService">
+			<ref bean="mailService"/>
+		</property>
+		<property name="configService">
+			<ref bean="configService"/>
+		</property>
+	</bean>
+	<!-- 登录 -->
+	<bean id="signin" class="org.zengsource.portal.web.SignInAction" scope="prototype">
+		<property name="forward">
+			<value>/themes/portal/index.jsp</value>
+		</property>
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+	</bean>
+	<!-- 退出 -->
+	<bean id="signout" class="org.zengsource.portal.web.SignOutAction">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+	</bean>
+	<!-- 权限不足 -->
+	<bean id="unauthorized" class="org.zengsource.portal.web.UnauthorizedAction">
+	</bean>
+	<!-- 微博登录 -->
+	<bean id="weibo" class="org.zengsource.portal.web.WeiboAction" scope="prototype">
+	</bean>
+	
+	<import resource="classpath:org/zengsource/portal/web/system/actions.xml"/>
+	<import resource="classpath:org/zengsource/portal/module/user/web/actions.xml"/>
+
+</beans>

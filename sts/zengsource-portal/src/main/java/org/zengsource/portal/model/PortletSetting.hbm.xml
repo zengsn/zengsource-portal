@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.zengsource.portal.model.PortletSetting" table="portletsettings">
+
+		<id name="id" column="psid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_psid</param>
+			</generator>
+		</id>
+		<property name="key" column="key_" type="string" />
+		<property name="name" column="name_" type="string" />
+		<property name="value" column="value_" type="string" />
+		<property name="usage" column="usage_" type="string" />
+
+		<many-to-one name="portlet" column="portletid_" not-null="false"
+			cascade="none" insert="true" update="false" />
+
+		<many-to-one name="instance" column="instanceid_"
+			not-null="false" cascade="none" insert="true" update="false" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lobosi.module.social.model.UserUpdate" table="userupdates"
+		lazy="false">
+		<id name="id" column="uuid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_uuid</param>
+			</generator>
+		</id>
+		<property name="text" column="text_" type="string" />
+		<property name="picture" column="picture_" type="string" />
+		<property name="status" column="status_" type="int" />
+
+		<many-to-one name="owner" column="ownerid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="org.zengsource.portal.module.user.model.UserInfo" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

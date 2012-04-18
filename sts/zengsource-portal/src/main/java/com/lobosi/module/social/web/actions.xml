@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 首页 -->
+	<bean id="social.friend" class="com.lobosi.module.social.web.FriendAction" scope="prototype">
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+		<property name="friendshipService">
+			<ref bean="friendshipService"/>
+		</property>
+		<property name="userUpdateService">
+			<ref bean="userUpdateService"/>
+		</property>
+	</bean>
+	<bean id="social.request" class="com.lobosi.module.social.web.RequestAction" scope="prototype">
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+		<property name="userUpdateService">
+			<ref bean="userUpdateService"/>
+		</property>
+		<property name="friendshipService">
+			<ref bean="friendshipService"/>
+		</property>
+	</bean>
+	<bean id="social.find" class="com.lobosi.module.social.web.FindAction" scope="prototype">
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+		<property name="socialService">
+			<ref bean="socialService"/>
+		</property>
+		<property name="userUpdateService">
+			<ref bean="userUpdateService"/>
+		</property>
+		<property name="friendshipService">
+			<ref bean="friendshipService"/>
+		</property>
+	</bean>
+	<bean id="social.update" class="com.lobosi.module.social.web.UpdateAction" scope="prototype">
+		<property name="userInfoService">
+			<ref bean="userInfoService"/>
+		</property>
+		<property name="userUpdateService">
+			<ref bean="userUpdateService"/>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.User" table="users"
+		lazy="false">
+		<id name="id" column="uid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_uid</param>
+			</generator>			
+		</id>
+		<property name="username" column="username_" type="string" />
+		<property name="password" column="password_" type="string" />
+		<property name="salt" column="salt_" type="string" />
+		<property name="email" column="email_" type="string" />
+		<property name="emailConfirm" column="emailconfirm_" type="string" />
+		<property name="emailShare" column="emailshare_" type="string" />
+		
+		<property name="avatar" column="avatar_" type="string" />
+		<property name="nickname" column="nickname_" type="string" />
+		<property name="realname" column="realname_" type="string" />
+		<property name="realnameShare" column="realnameShare_" type="string" />
+		<property name="location" column="location_" type="string" />
+		<property name="locationShare" column="locationShare_" type="string" />
+		<property name="sex" column="sex_" type="string" />
+		<property name="sexShare" column="sexshare_" type="string" />
+		<property name="birthday" column="birthday_" type="timestamp" />
+		<property name="birthdayShare" column="birthdayshare_" type="string" />
+		<property name="blog" column="blog_" type="string" />
+		<property name="blogShare" column="blogshare_" type="string" />
+		<property name="qq" column="qq_" type="string" />
+		<property name="qqShare" column="qqshare_" type="string" />
+		<property name="weibo" column="weibo_" type="string" />
+		<property name="weiboShare" column="weiboshare_" type="string" />
+		<property name="msn" column="msn_" type="string" />
+		<property name="msnShare" column="msnshare_" type="string" />
+		<property name="mobile" column="mobile_" type="string" />
+		<property name="mobileShare" column="mobileshare_" type="string" />
+		<property name="introduction" column="introduction_" type="string" />
+
+		<set name="roleSet" table="users_roles" cascade="save-update" lazy="false">
+			<key column="userid_" />
+			<many-to-many class="org.zengsource.portal.model.Role"
+				column="roleid_" />
+		</set>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

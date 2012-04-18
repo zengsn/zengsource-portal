@@ -1,0 +1,4 @@
+[
+	{xtype:'reqinviteportlet', width:660, height: 300, colspan: 2},
+	{xtype:'lobosiportlet', width:335, height: 300, colspan: 1}
+]

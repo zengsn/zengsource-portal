@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.zengsource.portal.model.Role" table="roles" lazy="false">
+		<id name="id" column="rid_" type="int" >
+			<generator class="sequence">
+				<param name="sequence">seria_rid</param>
+			</generator>			
+		</id>
+		<property name="name" column="name_" type="string" />
+		<property name="description" column="description_" type="string" />
+		
+		<many-to-one name="parent" column="parentid_" not-null="false"
+			cascade="none" insert="false" update="true" lazy="false" />
+		
+		<set name="permissionSet" table="permissions" cascade="save-update" lazy="false">
+			<key column="roleid_" />
+			<one-to-many class="org.zengsource.portal.model.Permission"/>
+		</set>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.lobosi.module.task.model.TaskExecutor" table="taskexecutors"
+		lazy="false">
+		<id name="id" column="teid_" type="int">
+			<generator class="sequence">
+				<param name="sequence">seria_terid</param>
+			</generator>
+		</id>
+		<property name="username" column="username_" type="string" />
+		<property name="nickname" column="nickname_" type="string" />
+		<property name="avatar" column="avatar_" type="string" />
+
+		<many-to-one name="user" column="userid_" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false"
+			class="org.zengsource.portal.module.user.model.UserInfo" />
+
+		<set name="taskSet" lazy="false" cascade="none" table="tasks_executors">
+			<key column="executorid_" not-null="true" />
+			<many-to-many class="com.lobosi.module.task.model.Task"
+				column="taskid_" not-found="exception" />
+		</set>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>
