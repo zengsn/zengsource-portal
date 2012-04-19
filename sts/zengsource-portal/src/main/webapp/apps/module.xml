@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<title>应用管理</title>
+	<desc>线上应用</desc>
+	<menus>
+		<menu>
+			<index>1</index>
+			<name>appsgrid</name>
+			<title>应用管理</title>
+			<widget>appsgridpanel</widget>
+			<controller>JXP.apps.admin.controller.Apps</controller>
+		</menu>
+	</menus>
+	<portlets>
+		<portlet>
+			<name>DashboardPortlet</name>
+			<title>应用面板</title>
+			<width>1000</width>
+			<height>600</height>
+			<jsSource>dashboard/Portlet.js</jsSource>
+			<jsClass>JXP.apps.frontend.view.dashboard.Portlet</jsClass>
+			<jsWidget>appsdashboardportlet</jsWidget>
+			<jsController>JXP.apps.frontend.controller.Dashboard</jsController>
+			<roles>member</roles>
+		</portlet>
+	</portlets>
+	<pages>
+		<page>
+			<url>/apps/index.jxp</url>
+			<name>应用面板</name>
+			<columns>1</columns>
+			<portlets>
+				<portlet>
+					<width>1000</width>
+					<height>600</height>
+					<jsClass>JXP.apps.frontend.view.dashboard.Portlet</jsClass>
+				</portlet>
+			</portlets>
+			<roles>member</roles>
+		</page>
+	</pages>
+</module>

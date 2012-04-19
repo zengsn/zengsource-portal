@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reponse success="true">
+	<Module>
+		<id>1</id>
+		<name>notepad</name>
+		<title>记事本</title>
+		<desc>个人记事本</desc>
+		<createdTime>昨天</createdTime>
+	</Module>
+	<Module>
+		<id>2</id>
+		<name>task</name>
+		<title>任务</title>
+		<desc>任务指派、收文件</desc>
+		<createdTime>昨天</createdTime>
+	</Module>
+</reponse>
